@@ -6,9 +6,9 @@ Acredito que ainda falta refatorar o mesmo e aplicar o requisito de Teste do cod
 
 ### Instalação e Execução
 Para executar o projeto é simples.    
-1 baixar o projeto do repositorio     
-2 ``` cd backend-test/app && npm i ```   
-3 ``` npm start ```  
+- baixar o projeto do repositorio     
+- ``` cd backend-test/app && npm i ```   
+- ``` npm start ```  
 
 ### Testando
 Execute o teste pela terminal LINUX, Postman ou qualquer aplicação client rest.     
