@@ -34,11 +34,11 @@ module.exports = app => {
 				res.status(200).json({success: true, data: result})
 			}
 			else if(req.query["description"]) {
-				result = filter( data, req.query.description.toLowerCase(), "description" )
+				result = filter( data, req.query.description.toLowerCase(), "description" ).sort(sort)
 				res.status(200).json({success: true, data: result})
 			}
 			else if (req.query["cidade"]){
-				result = filter( data, req.query.cidade, "cidade" )
+				result = filter( data, req.query.cidade, "cidade" ).sort(sort)
 				res.status(200).json({success: true, data: result})
 			}
 		},
