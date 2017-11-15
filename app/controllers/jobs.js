@@ -21,14 +21,16 @@ module.exports = app => {
 		}
 	}
 
+	const sort = ( a, b ) => b.salario - a.salario
+
 	return {
 
 		listAll: ( req, res )=>{ 
 
-			var result = {}
+			let result = {}
 
 			if(req.query["title"]){
-				result = filter( data, req.query.title.toLowerCase(), "title" )
+				result = filter( data, req.query.title.toLowerCase(), "title" ).sort(sort)
 				res.status(200).json({success: true, data: result})
 			}
 			else if(req.query["description"]) {
