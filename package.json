@@ -1,0 +1,36 @@
+{
+  "name": "backend-test",
+  "version": "1.0.0",
+  "description": "backend-test busca de emprego Catho",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souzacristsf/backend-test.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Michel Ferreira Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souzacristsf/backend-test/issues"
+  },
+  "homepage": "https://github.com/souzacristsf/backend-test#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4",
+    "cwd": "^0.10.0",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.1",
+    "http": "0.0.0",
+    "mongoose": "^4.11.3",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.8.2"
+  }
+}
