@@ -15,7 +15,7 @@ Execute o teste pela terminal LINUX, Postman ou qualquer aplicação client rest
 Coloque no lugar ```<ip host : 5000>``` seu IP e porta. exemplo: ```http://localhost:5000```
 
 Buscando vagas por *title* e ordenando salario por *asc* "Acrescente"
-- curl "<ip host test>/api/v1/jobs?title=Recepcionista&sort=asc"
+- curl "<ip host : 5000>/api/v1/jobs?title=Recepcionista&sort=asc"
 
 Buscando vagas por *title* e ordenando salario por *desc* "Decrescente"
 - curl "<ip host : 5000>/api/v1/jobs?title=Recepcionista&sort=desc"
