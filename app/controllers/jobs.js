@@ -27,7 +27,7 @@ module.exports = app => {
 	}
 
 	const sortType = (type) => {
-		console.log('type: ', type)
+
 		const desc = ( a, b ) => b.salario - a.salario
 		const asc = ( a, b ) => a.salario - b.salario
 		
@@ -46,8 +46,6 @@ module.exports = app => {
 			let result = {}
 
 			let type = req.query.sort
-
-			console.log(type)
 
 			if(req.query["title"]){
 				result = filter( data, req.query.title.toLowerCase(), "title" ).sort(sortType(type))
