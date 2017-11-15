@@ -21,7 +21,23 @@ module.exports = app => {
 		}
 	}
 
-	const sort = ( a, b ) => b.salario - a.salario
+	const typeSort = {
+		asc: "asc",
+		desc: "desc"
+	}
+
+	const sortType = (type) => {
+		console.log('type: ', type)
+		const desc = ( a, b ) => b.salario - a.salario
+		const asc = ( a, b ) => a.salario - b.salario
+		
+		const types = {
+			desc,
+			asc
+		}
+		
+		return types[type]
+	} 
 
 	return {
 
@@ -29,8 +45,12 @@ module.exports = app => {
 
 			let result = {}
 
+			let type = req.query.sort
+
+			console.log(type)
+
 			if(req.query["title"]){
-				result = filter( data, req.query.title.toLowerCase(), "title" ).sort(sort)
+				result = filter( data, req.query.title.toLowerCase(), "title" ).sort(sortType(type))
 				res.status(200).json({success: true, data: result})
 			}
 			else if(req.query["description"]) {
